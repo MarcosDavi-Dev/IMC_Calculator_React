@@ -66,6 +66,19 @@ const ImcCalc = ({ calcImc }) => {
           />
           <Button id="clear-btn" text="Limpar" action={clearForm} />
         </div>
+        <div id="author">
+          <h4>
+            Desenvolvido por{" "}
+            <a
+              href="https://github.com/MarcosDavi-Dev/IMC_Calculator_React"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Marcos Davi
+            </a>{" "}
+            &copy; 2025
+          </h4>
+        </div>
       </form>
     </div>
   );
