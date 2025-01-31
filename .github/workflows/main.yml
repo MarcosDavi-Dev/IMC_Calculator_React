@@ -26,14 +26,8 @@ jobs:
       - name: Build App
         run: npm run build
 
-      # Deploy para o Surge.sh (caso esteja usando o Surge)
-      - name: Install Surge
-        run: npm install -g surge
-      - name: Deploy to Surge
-        run: surge ./build react-ts-pwa-expense-tracker.surge.sh --token ${{secrets.FIREBASE_TOKEN}}
-
-      # Deploy para o Firebase (caso esteja usando Firebase Hosting)
+      # Deploy para Firebase Hosting
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
       - name: Deploy to Firebase
-        run: firebase deploy --token ${{secrets.FIREBASE_TOKEN}}
+        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
